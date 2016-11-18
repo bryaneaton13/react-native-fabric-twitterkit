@@ -1,7 +1,5 @@
 package com.tkporter.fabrictwitterkit;
 
-import android.app.Activity;
-
 import com.facebook.react.ReactPackage;
 import com.facebook.react.bridge.JavaScriptModule;
 import com.facebook.react.bridge.NativeModule;
@@ -52,7 +50,7 @@ public class FabricTwitterKitPackage implements ReactPackage {
         return instance;
     }
 
-    public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
-        twitterKitModule.onActivityResult(activity, requestCode, resultCode, data);
+    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+        twitterKitModule.onActivityResult(requestCode, resultCode, data);
     }
 }
